@@ -96,9 +96,21 @@ private fun loadModel(context: Context): Interpreter {
 }
 ```
 
+Для предобработки входных изображений был использован `ImageProcessor`:
+```kotlin
+val inputProcessor = ImageProcessor.Builder()
+    .add(ResizeOp(IMAGE_SIZE, IMAGE_SIZE, ResizeOp.ResizeMethod.BILINEAR))
+    .add(TransformToGrayscaleOp())
+    .add(NormalizeOp(0f, 255f))
+    .build()
+```
 
+Было добавлено 3 операции:
+- `ResizeOp`: изменяет размер изображения до 32 на 32 пикселя с использованием билинейного метода интерполяции;
+- `TransformToGrayscaleOp`: преобразует изображение в градации серого;
+- `NormalizeOp(0f, 255f)`: нормализует пиксели изображения, делая их значения от 0 до 1.
 
-Полный метод для распознавания цифры на изображении:
+Полный метод распознавания цифры на изображении:
 ```kotlin
 private fun recognizeImage(bitmap: Bitmap): Int {
     val convertedBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true)
@@ -122,3 +134,7 @@ private fun recognizeImage(bitmap: Bitmap): Int {
 
 Результаты работы программы:
 ![Report](https://github.com/chiki-takipavel/ML_LW4_Back/assets/55394253/bc3f4175-e80b-46ea-bb99-11e58866e52e)
+![Report](https://github.com/chiki-takipavel/ML_LW4_Back/assets/55394253/7f6f8d87-12d5-4b81-907e-03d01fbf54ae)
+
+Также присутствуют случаи, когда программа не может обнаружить цифру на изображении или когда результат распознавания некорректен:
+![Report](https://github.com/chiki-takipavel/ML_LW4_Back/assets/55394253/971aebac-6282-4b84-ac2e-ef7c63d5b175)
