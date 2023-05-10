@@ -26,7 +26,7 @@ model = tf.keras.Sequential([
 **Точность данной модели на тестовой выборке составила: 98,7%.**
 
 Кривые обучения данной модели для набора MNIST:
-![Learning curves](https://github.com/chiki-takipavel/ML_LW4_Back/assets/55394253/75564fe3-8448-4c25-8d39-3fe0ff5c4317)
+![Learning curves](https://github.com/chiki-takipavel/ML_LW4_Back/blob/master/plots/Accuracy%20and%20loss%20(MNIST).png)
 
 ## Задание 2
 *После уточнения модели на синтетических данных попробуйте обучить ее на реальных данных (набор Google Street View). Что изменилось в модели?*
@@ -71,7 +71,7 @@ model = tf.keras.Sequential([
 **Точность данной модели на тестовой выборке составила: 90,5%.**
 
 Кривые обучения данной модели для набора SVHN:
-![Learning curves](https://github.com/chiki-takipavel/ML_LW4_Back/assets/55394253/9aea0fba-3ff2-44ee-b5df-5c8adfe45e59)
+![Learning curves](https://github.com/chiki-takipavel/ML_LW4_Back/blob/master/plots/Accuracy%20and%20loss%20(SVHN).png)
 
 ## Задание 3-4
 *Реализуйте приложение для ОС Android, которое может распознавать цифры в номерах домов, используя разработанный ранее классификатор.*
@@ -133,8 +133,8 @@ private fun recognizeImage(bitmap: Bitmap): Int {
 ```
 
 Результаты работы программы:
-![Report](https://github.com/chiki-takipavel/ML_LW4_Back/assets/55394253/bc3f4175-e80b-46ea-bb99-11e58866e52e)
-![Report](https://github.com/chiki-takipavel/ML_LW4_Back/assets/55394253/7f6f8d87-12d5-4b81-907e-03d01fbf54ae)
+![Report](https://github.com/chiki-takipavel/ML_LW4_Back/blob/master/plots/Screenshots%201.png)
+![Report](https://github.com/chiki-takipavel/ML_LW4_Back/blob/master/plots/Screenshots%202.png)
 
 Также присутствуют случаи, когда программа не может обнаружить цифру на изображении или когда результат распознавания некорректен:
-![Report](https://github.com/chiki-takipavel/ML_LW4_Back/assets/55394253/971aebac-6282-4b84-ac2e-ef7c63d5b175)
+![Report](https://github.com/chiki-takipavel/ML_LW4_Back/blob/master/plots/Screenshots%203.png)
